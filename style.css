@@ -1,0 +1,207 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    width:100%;
+    height:auto;
+    font-family: 'Arial, Helvetica, sans-serif';
+    padding:0;
+    margin:0;
+}
+a{
+    text-decoration:none;
+}
+.lyrics-inner-container{
+    width:100%;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(guitar.jpg) no-repeat center center;
+    background-size:cover;
+    text-align:center;
+    padding: 60px 0;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 1px 4px 1px rgba(29, 28, 28,0.2);
+}
+.lyrics-upper-title{
+    margin-bottom: 8px;
+    font-size:35px;
+    color:white;
+    margin-bottom: 30px;
+}
+.lyrics-search{
+    position:relative;
+    background-color:#fff;
+    border-radius:50px;
+    width: 500px;
+    max-width:100%;
+    transition: all 0.7s linear;
+}
+.lyrics-input{
+    float:left;
+    font-size:16px;
+    border:0;
+    margin:2px 23px;
+    width:70%;
+    height:45px;
+}
+.lyrics-input:focus, .lyrics-btn:focus{
+    outline:none;
+}
+
+.lyrics-btn{
+    position:absolute;
+    top:2.5px;
+    right:2.5px;
+    padding:9.5px 25px;
+    color:#fff;
+    background-color:#e056fd;
+    border-radius: 50px;
+    font-size:16px;
+    cursor:pointer;
+    border:0;
+    transition: background-color 0.3s linear;
+}
+.lyrics-btn:hover{
+    background-color:#ca19ee;
+}
+.lyrics-btn:active{
+    transform: scale(0.93);
+}
+
+.moreLyrics{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.lyricsBtns{
+    background-color:#8d56fd;
+    border:0;
+    border-radius: 10%;
+    padding:8px 15px; 
+    margin-right:15px;
+    color:#fff;
+    cursor:pointer;
+} 
+
+.search-result{
+    margin:30px auto;
+    max-width:100%;
+    width:500px;
+}
+.search-result h2{
+    font-weight:300;
+}
+.songs{
+    list-style:none;
+}
+.songs li{
+    margin:10px 0;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+
+}
+.search-result span{
+    line-height: 2;
+}
+.deezer{
+    margin:10px 0;
+}
+.fixedSearchbar{
+    position:fixed;
+    width:100%;
+    padding:1px 0 ;
+    top:0;
+    left:0;
+    background-color:rgba(7, 6, 6, 0.3);
+    border-radius:0;
+    z-index:10000;
+}
+.fixedSearchbarInput{
+    padding:17px !important;
+    font-size:16px;
+    border:0;
+    border-radius:40px;
+    margin:2px 23px;
+    width:80%;
+    height:30px;
+}
+.fixedSearchbarButton{
+    top:2.5px;
+    right:6px !important;
+    padding:5px 18px !important;
+    color:#fff;
+    background-color:rgba(85, 11, 95,0.8);
+    border-radius: 50px;
+    font-size:16px;
+    cursor:pointer;
+    border:0;
+}
+
+
+
+@media only screen and (max-width:600px){
+    .lyrics-search{
+        width:340px;
+    }
+    .lyrics-input{
+        width:55%;
+        font-size:15px;
+        border:0;
+        margin:2px 13px;
+        border-radius:40px;
+        transform: scale(0.95);
+    }
+    .fixedSearchbar{
+        position:fixed;
+        width:100%;
+        padding:1px 0 ;
+        top:0;
+        left:0;
+        background-color:rgba(7, 6, 6, 0.4);
+        border-radius:0;
+        z-index:10000;
+    }
+    .fixedSearchbarInput{
+        padding:17px;
+        font-size:16px;
+        border:0;
+        border-radius:40px;
+        margin:2px 23px;
+        width:60%;
+        height:30px;
+    }
+    .fixedSearchbarButton{
+      
+        top:1px;
+        right:5px !important;
+        padding:5px 10px !important;
+        height:35px;
+        color:#fff;
+        background-color:rgba(85, 11, 95,0.8) !important;
+        border-radius: 50px;
+        font-size:16px;
+        cursor:pointer;
+        border:0;
+    }
+    .lyrics-btn{
+        top:3px;
+        right:3px;
+        padding:10px 25px;
+        transform: scale(0.95);
+    }
+    .lyrics-inner-container{
+        padding:50px 0;
+    }
+    .deezer{
+        margin: 20px 0;
+        display:flex;
+        flex-direction:column;
+    }
+    .lyrics-inner-container h6{
+        font-size:14px !important;
+    }
+}
