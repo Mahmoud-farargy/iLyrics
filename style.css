@@ -7,6 +7,8 @@ body{
     font-family: 'Arial, Helvetica, sans-serif';
     padding:0;
     margin:0;
+    background-color:rgb(241, 241, 241);
+    overflow-x: hidden;
 }
 a{
     text-decoration:none;
@@ -22,7 +24,7 @@ a{
     flex-direction: column;
     align-items:center;
     justify-content:center;
-    box-shadow: 0 1px 4px 1px rgba(29, 28, 28,0.2);
+    box-shadow:  0 1px 10px rgba(0, 0, 0, 0.3);
 }
 .lyrics-upper-title{
     margin-bottom: 8px;
@@ -46,6 +48,7 @@ a{
     width:70%;
     height:45px;
 }
+
 .lyrics-input:focus, .lyrics-btn:focus{
     outline:none;
 }
@@ -87,28 +90,42 @@ a{
 } 
 
 .search-result{
-    margin:30px auto;
+    margin:30px ; /*took away the margin auto */
     max-width:100%;
     width:500px;
+    display:flex;
+    flex-direction: column !important;
 }
 .search-result h2{
     font-weight:300;
 }
 .songs{
     list-style:none;
+   
 }
 .songs li{
-    margin:10px 0;
+    margin:15px 0;
     display:flex;
     justify-content: space-between;
     align-items:center;
-
+    border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
+}
+.songs li:nth-last-child(1){
+    border:none !important;
+}
+.songs button{
+    margin-bottom:8px;
+    align-self:center;
+    justify-self:center;
+    float:right;
+    margin-right:0;
 }
 .search-result span{
     line-height: 2;
 }
 .deezer{
     margin:10px 0;
+    white-space: auto;
 }
 .fixedSearchbar{
     position:fixed;
@@ -140,18 +157,104 @@ a{
     cursor:pointer;
     border:0;
 }
+.arrow-up{
+    color:rgba(85, 11, 95,0.8);
+    position: fixed;
+    bottom:30px;
+    right:40px;
+    transition: color 0.6s linear;
+    cursor:pointer;
+    display:none;
+}
+.arrow-up:active{
+    color:rgba(46, 4, 53, 0.8)
+}
 
+.artist-name{
+    text-decoration: underline;
+    text-decoration-color: rgba(253, 102, 51,0.2);
+    color: #f63;
+    font-weight:500;
+    font-size:21px;
+    overflow:hidden;
+    white-space:nowrap;
+    margin:4px 0;
+    text-overflow:ellipsis;
+    background-image: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff), linear-gradient(rgba(255,102,50,.4),rgba(255,102,50,.4));
+    background-size: .05em 1px .05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: 0.95%, 100% 95%,0 95%;
+    
+}
+.song-title{
+    color:#503750;
+    font-size:45px;
+    font-weight:700;
+    text-overflow: ellipsis;
+}
+.lyrics-style{
+    white-space:pre-line;
+    font-weight:400;
+    word-break: break-word;
+    color:#2c3e50;
+    font-size:18px;
+    user-select: none;
+    line-height:1.7 !important;
 
+}
+.showMore-LessBtn{
+    font-weight:300;
+    font-size:22px;
+    outline: 0;
+}
+.bio{
+    font-size:21px;
+    margin: 2px 0 17px 0;
+    text-align:left;
+    width:80%;
+    padding-bottom:5px;
+    border-bottom:2px solid black;
+}
+.rotate-icon{
+    transition: all 0.1s linear;
+}
+.socials{
+    display:flex;
+    margin-top:18px;
+}
+.socials .links{
+    text-decoration:none !important;
+    transition: transform 0.3s linear;
+}
+.links:hover{
+    transform: scale(1.06);
+}
+.socials .links i{
+    font-size: 2.5em;
+    margin-right:10px;
+    margin-bottom:7px;
+}
 
+.sectionDisplay{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.accordion{
+    width:400px;
+    margin-right:10px;
+}
 @media only screen and (max-width:600px){
     .lyrics-search{
         width:340px;
+        font-size:17px !important;
     }
     .lyrics-input{
-        width:55%;
+        width:57%;
         font-size:15px;
         border:0;
-        margin:2px 13px;
+        padding-left:3px;
+        margin:2px 11px;
         border-radius:40px;
         transform: scale(0.95);
     }
@@ -189,7 +292,7 @@ a{
     }
     .lyrics-btn{
         top:3px;
-        right:3px;
+        right:2px;
         padding:10px 25px;
         transform: scale(0.95);
     }
@@ -203,5 +306,43 @@ a{
     }
     .lyrics-inner-container h6{
         font-size:14px !important;
+    }
+    .lyricsBtns{
+        border:0;
+        border-radius: 10%;
+        padding:3px 9px !important; 
+        margin-right:15px;
+    }
+    .songs{
+        padding-left:13px;
+    }
+    .arrow-up{
+        bottom:30px;
+        right:17px;
+    }
+    .songs li{
+        width:96.5%;
+    }
+    .songs button{
+        align-self:center;
+        justify-self:flex-end;
+        float:right;
+        margin:0 0 8px 0;
+    }
+    .song-title{
+        font-weight: 600;
+        font-size:30px !important;
+    }
+    .lyrics-style{
+        text-align:center;
+    }
+    .accordion{
+        margin-left:27px;
+        width:85%;
+        margin-right:0;
+    }
+    .socials .links i{
+        font-size: 1.6em;
+        margin-right:15px;
     }
 }
