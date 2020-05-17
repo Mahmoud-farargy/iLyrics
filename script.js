@@ -111,7 +111,7 @@
 
         `<li>
             <span><strong class="text-primary">${song.artist.name}</strong> - ${song.title}</span>
-            <button class="lyricsBtns" data-artist="${song.artist.name}" data-songtitle="${song.title}" data-album="${song.album.title}" data-playSample="${song.preview}" data-songDeezer="${song.link}" data-artistDeezer="${song.artist.link}">Get lyrics</button>
+            <button class="lyricsBtns" data-artist="${song.artist.name}" data-songtitle="${song.title}" data-album="${song.album.title}" data-songDeezer="${song.link}" data-artistDeezer="${song.artist.link}">Get lyrics</button>
         </li>`
         
             ).join("")}
@@ -257,11 +257,7 @@
                         <h5>Album/Single Song Title: "${album}"</h5>
                         <a title="Copy lyrics" class="copyBtn" onclick="copyLyrics()"><i class="far fa-copy"></i></a>
                         <div class="deezer"><span class="mr-2"><a href="${songDeezer}" target="_blank">Check song on Deezer</a> <i class="fas fa-external-link-alt fa-sm"></i></span> <span>  <a href="${artistDeezer}" target="_blank">${artist} on Deezer</a> <i class="fas fa-external-link-alt fa-sm"></i></span></div>
-                        <audio controls id="playSample" style="outline: 0;">
-                            <source src="${play}" type="audio/mp3">
-                            <source src="${play}" type="audio/ogg">
-                            <source src="${play}" type="audio/mpeg">
-                        </audio>
+                       
                         
                         <br><br>
                        <p class="lyrics-style mt-2 mb-0 mp-0">${lyrics}</p>
@@ -270,7 +266,11 @@
                     
                </div>
                 `;
-                    
+                    //  <audio controls id="playSample" style="outline: 0;">
+                    //         <source src="${play}" type="audio/mp3">
+                    //         <source src="${play}" type="audio/ogg">
+                    //         <source src="${play}" type="audio/mpeg">
+                    //     </audio>
                 console.log(albumTracks);
                 topTracksBtn.innerHTML= `
                         <a class="mb-4 backBtn" onclick="backToMenu()" style="background-color:#ff6050;">Top 15 songs</a>
@@ -387,11 +387,11 @@
             });
             
                  
-                    if(play === undefined || play === null || play === ""){
-                        document.getElementById("playSample").style.display="none";
-                    }else{
-                        document.getElementById("playSample").style.display="block";
-                    }
+                    // if(play === undefined || play === null || play === ""){
+                    //     document.getElementById("playSample").style.display="none";
+                    // }else{
+                    //     document.getElementById("playSample").style.display="block";
+                    // }
                 
             }
              more.innerHTML = ""; //"more" buttons are hidden by default
