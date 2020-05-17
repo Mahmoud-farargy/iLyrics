@@ -14,7 +14,7 @@
 </head>
                 <!-- MAHMOUD FARARGY -->
 <body>
-    <section class="lyrics-outer-container" id="app">
+<section class="lyrics-outer-container" style="min-height:100%;">
         <header class="lyrics-inner-container">
             <h2 class="lyrics-upper-title">Lyrics Search</h2>
             <h6 style="color:white; font-size:14px !important;">Brought to you by Mahmoud farargy A.K.A Mazen </h6>
@@ -25,23 +25,35 @@
             
         </header>
         <div class="sectionDisplay">
+                <!-- artist -->
             <div id="search-artist" style="margin-top:50px; float:left !important;">
                 
             </div>
+
+                <!-- results -->
             <div id="search-result" class="search-result" style="margin-top:24px;">
-                <p style="text-align:center; font-size:17px; color:rgb(90, 53, 177);">Results will be displayed here</p>
+                <p style="text-align:center; font-size:17px; margin-top:20px; color:rgb(90, 53, 177);">Results will be displayed here</p>
             </div>
+
         </div>
-            <div id="moreLyrics" style="margin:30px auto; display:flex; justify-content:center;"></div>
+
+        <div id="moreLyrics" style="margin:30px auto; display:flex; justify-content:center;"></div>
+                <!-- TOP 10 TRACKS -->
+        <div id="topTracks" class="top-tracks" style="background-color:#fff;">
+
+        </div>
+            
+        <div id="topTracksBtn"></div>
 
             <a href="#search-result" class="arrow-up" id="arrowUp"> <i class="fas fa-chevron-circle-up fa-2x " id="moveUp"></i></a>
      
-            <button onclick="newApi()">test</button>
-           
+            <!-- <button onclick="newApi()">test</button> -->
+      
     </section>
     <footer>
         <p style="text-align:center;">&copy; 2020 Mahmoud Farargy</p>
     </footer>
+        
         <!-- Scripts -->
      
     <script type="text/javascript" src="script.js"></script>
